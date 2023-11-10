@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedram Babazadeh</title>
+
+  <style>
+    /* Reset some default styles */
+    body, h1, p
+    {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Apply some basic styling */
+    body
+    {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 20px;
+      margin: 10px;
+      display:flex;
+      justify-content: center;
+    }
+
+    .container
+    {
+      display:grid;
+      text-align:center;
+      max-width: 70%;
+    }
+
+    h1
+    {
+      color: #007bff;
+      margin:5px 0 0;
+      padding-bottom:5px;
+    }
+
+    h2
+   {
+    padding: 0;
+    margin:0;
+    font-size: 15px;
+    }
+
+    h3
+    {
+      color:#007bff;
+      width: 50%;
+      border-bottom: 2px solid #007bff;
+      margin: 0 auto;
+      margin-bottom:10px;
+    }
+
+    p
+   {
+      margin-bottom: 20px;
+   }
+
+   section
+   {
+    margin-top: 25px;
+    text-align:center;
+   }
+
+   .skills-container
+   {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+   }
+
+   .skills-container > li 
+   {
+    list-style-type: none;
+    padding: 5px;
+    background-color:aquamarine;
+    border-radius: 10px;
+   }
+   
+   .skills-container>li:hover{
+      background-color: #007bff;}
+
+    [lang = "fa"]{
+      display:none;
+    }
+
+
+    /* Media Queries */
+    @media only screen and (max-width: 600px) {
+      /* Styles for screens with a maximum width of 600px (typical mobile devices) */
+
+      h1
+      {
+        font-size: 24px;
+      }
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+      /* Styles for screens with a width between 601px and 1024px (larger mobile devices and tablets) */
+      body
+      {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" title="resume Body">
+    <header>
+      <h1 lang="en" title="name : Pedram Babazadeh">Pedram Babazadeh</h1>
+      <h2 lang="en" title="role: Frontend Developer">Frontend Developer</h2>
+      <h1 lang="fa" title="نام: پدرام بابازاده">پدرام بابازاده</h1>
+      <h2 lang="fa" title="حرفه: توسعه دهندۀ رابط کاربری">توسعه‌دهندۀ رابط کاربری</h2>
+    </header>
+
+    <main>
+      <section title="Skills" class="skills-sec">
+        <h3> Skills</h3>
+        <ul class="skills-container">
+          <li title="HTML5 Skill"> HTML5</li>
+          <li title="CSS3 Skill"> CSS3</li>
+          <li title="Javascript Skill"> JS</li>
+          <li title="reactJs Skill"> React.js</li>
+          <li title="typeScript Skill"> Typescript</li>
+          <li title="Git Skill"> Git</li>
+          <li title="Jest Skill"> Jest</li>
+          <li title="Unit testing Skill">Unit testing</li>
+          <li title="Redux Skill"> Redux </li>
+          <li title="jQuery Skill"> jQuery </li>
+          <li title="Bootstrap Skill"> Bootstrap</li>
+          <li title="Sass Skill">Sass</li>
+          <li title="CI-CD Skill">CI/CD</li>
+          <li title="WCAG Principles Skill">WCAG</li>
+          <li title="Agile Scrum Skill">Agile/ Scrum</li>
+          <li title=" SEO Skill">On-page SEO</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Experience</h3>
+
+      </section>
+      
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Pedram Babazadeh HTML CV</p>
+    </footer>
+  </div>  
+</body>
+
+</html>
