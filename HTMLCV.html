@@ -31,6 +31,8 @@
       display:grid;
       text-align:center;
       max-width: 70%;
+      background-color: #ffffff;
+      padding: 5px 15px;
     }
 
     h1
@@ -67,14 +69,15 @@
     text-align:center;
    }
 
-   .skills-container
+   .ul-container
    {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 15px;
+    padding: 0;
    }
 
-   .skills-container > li 
+   .ul-container > li 
    {
     list-style-type: none;
     padding: 5px;
@@ -82,21 +85,66 @@
     border-radius: 10px;
    }
    
-   .skills-container>li:hover{
+   .ul-container>li:hover{
       background-color: #007bff;}
 
-    [lang = "fa"]{
+    [lang = "fa"]
+    {
       display:none;
+    }
+
+    .achievements > li
+    {
+      text-align: left;
+      font-size: 14px;
+    }
+
+
+    /* Experiences Part*/
+
+    .experience-container
+    {
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+    .experience > h4
+    {
+      margin-bottom: 5px;
+    }
+
+    .experience > h5
+    {
+      margin-top: 5px;
     }
 
 
     /* Media Queries */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 320px) {
+      /* Styles for screens with a maximum width of 320px (typical mobile devices) */
+
+      h1
+      {
+        font-size: 28px;
+      }
+
+      .ul-container
+      {
+        grid-template-columns : 1fr 1fr;
+      }
+    }
+   
+    @media only screen and (min-width: 321px)  and (max-width: 600px) {
       /* Styles for screens with a maximum width of 600px (typical mobile devices) */
 
       h1
       {
         font-size: 24px;
+      }
+
+      .ul-container
+      {
+        grid-template-columns : 1fr 1fr 1fr;
       }
     }
 
@@ -105,6 +153,11 @@
       body
       {
         font-size: 16px;
+      }
+
+      .ul-container
+      {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   </style>
@@ -120,9 +173,10 @@
     </header>
 
     <main>
-      <section title="Skills" class="skills-sec">
-        <h3> Skills</h3>
-        <ul class="skills-container">
+      <section title="Skills section" class="skills-sec">
+        <h3 lang="eng"> Skills</h3>
+        <h3 lang="fa"> مهارت‌ها</h3>
+        <ul class="ul-container">
           <li title="HTML5 Skill"> HTML5</li>
           <li title="CSS3 Skill"> CSS3</li>
           <li title="Javascript Skill"> JS</li>
@@ -142,10 +196,70 @@
         </ul>
       </section>
 
-      <section>
-        <h3>Experience</h3>
+/* Here I have listed my Experience*/      
 
+      <section title="Experiences section">
+        <h3 lang="eng">Experience</h3>
+        <h3 lang="fa">تجربه‌ها</h3>
+        <div lang="eng" class="container experience-container">
+          <div class="experience">
+            <h4>Faramouj</h4>
+            <h5>Frontend Developer(Remote)| Sep 2020- Feb 2021</h5>
+            <ul class="achievements">
+              <li>Converted some former HTML designs to react.js which led to
+                higher-speed SPAs</li>
+              <li>Used GIT technology to collaborate with the other members</li>
+            </ul>
+          </div>
+          <div class="experience">
+            <h4>Hassanzadeh Jewellery</h4>
+            <h5>SEO manager | Feb 2019- Feb 2021</h5>
+            <ul class="achievements">
+              <li>Efficiently collaborated with the developer team to create the
+                website</li>
+              <li>Ranking behind top 10 in some competitive keywords in
+                Persian and English
+              </li>
+            </ul>
+          </div>
+          <div class="experience">
+            <h4>POYA HOST</h4>
+            <h5>Frontend Developer(intern)| Oct 2018-Oct 2019</h5>
+            <ul class="achievements">
+              <li>Solved the problem of direction in various web templates.
+                Changed the directions from LTR to RTL for Persian websites
+                and redesigned the templates.
+                </li>
+              <li>Converted PSD files to Responsive web templates using HTML,
+                CSS, Bootstrap, and jQuery.
+              </li>
+              <li>Collaborated with the design team and backend team</li>
+              <li>Collaborated with senior team members to test the code and
+                develop the projects throughout the various phases of their
+                lifecycle.
+                </li>
+            </ul>
+          </div>
+        </div>
       </section>
+
+/*Here The certificates I have achieved are listed */
+
+      <section title="Experiences section">
+        <h3 lang="eng">Experience</h3>
+        <h3 lang="fa">مهارت‌ها</h3>
+        <div lang="eng" class="container experience-container">
+          <div class="experience">
+            <h4>Faramouj</h4>
+            <h5>Frontend Developer(Remote)| Sep 2020- Feb 2021</h5>
+            <ul class="achievements">
+              <li>Converted some former HTML designs to react.js which led to
+                higher-speed SPAs</li>
+              <li>Used GIT technology to collaborate with the other members</li>
+            </ul>
+          </div>
+         </div>
+         </section> 
       
     </main>
 
