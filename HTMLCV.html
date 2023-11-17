@@ -33,6 +33,8 @@
       max-width: 70%;
       background-color: #ffffff;
       padding: 5px 15px;
+      margin-left:auto;
+      margin-right: auto;
     }
 
     h1
@@ -91,7 +93,24 @@
    .ul-container>li:hover{
       background-color: #007bff;}
 
-    [lang = "fa"]
+    /*Language rulse*/
+
+    body[lang = "en"]
+    {
+      direction: ltr;
+    }
+
+    body[lang = "fa"]
+    {
+      direction: rtl;
+    }
+
+    body[lang = "en"] *[lang = "fa"]
+    {
+      display:none;
+    }
+
+    body[lang = "fa"] *[lang = "en"]
     {
       display:none;
     }
@@ -113,17 +132,24 @@
     {
       padding-top: 10px;
     }
-    /* Experiences Part*/
 
-    .experience-container
+    /*Bio part*/
+
+    .bio-description
     {
-      margin-left:auto;
-      margin-right: auto;
+      margin-top: 0px;
     }
+
+    /* Experiences Part*/
 
     .experience > h4
     {
       margin-bottom: 5px;
+    }
+
+    .experience:nth-child(1) > h4 
+    {
+      margin-top: 0px;
     }
 
     .experience > h5
@@ -188,12 +214,10 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
-
-    [content = " Phone nomber :  "]{background-color: aquamarine;}
   </style>
 </head>
 
-<body>
+<body lang="en">
   <div class="container" title="resume Body">
     <header>
       <h1 lang="en" title="name : Pedram Babazadeh">Pedram Babazadeh</h1>
@@ -207,21 +231,34 @@
         <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
         <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
       </p>
+      <p lang="fa" title="اطلاعات تماس" class="p-contact">
+        <span> آدرس ایمیل : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
+        <span> شمارۀ تماس :  <a href="tel:+36202955882">+36202955882</a></span></br>
+        <span> سکونتگاه: Budapest, HU  </span></br>
+        <span> لینکدین: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
+        <span> گیت-هاب: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
+      </p>
+
+      <!--the following buttong toggles the language between Persian and English-->
+      <div onclick="toggleLang()" class="lang-changer"> click here to modify the language</div>
     </header>
 
     <main>
 
       <section title="about me">
-        <h3> About me</h3>
-        <p lang="en" title="CV Description" class="bio-description">
-          As a front-end developer, I am passionate about creating engaging and intuitive user interfaces that improve the user experience.
-           I have experience with HTML, CSS, and JavaScript, having developed several projects including responsive websites and web applications. 
-           I have also worked with popular frontend frameworks and libraries such as React.js, jQuery, and Bootstrap, and am eager to continue learning and using new technologies.
-           Collaborating with other team members is a strength of mine, and I am dedicated to writing clean and efficient code that meets project requirements.
-          </p>
-          <p lang="fa" title="CV Description" class="bio-description">
-            توشعه دهنده رابط کاربری با 2 سال سابقۀ کار با جاواسکریپت، اچ تی ام ال و سس‌اس‌اس. همچنین دارای تجربۀ کاری باکتابخوانه‌های محبوب مانند ریکت و تایپسکریپت.
+        <h3 lang="en"> About me</h3>
+        <h3 lang="fa"> دربارۀ من</h3>
+        <div class="container">
+          <p lang="en" title="CV Description" class="bio-description">
+            As a front-end developer, I am passionate about creating engaging and intuitive user interfaces that improve the user experience.
+            I have experience with HTML, CSS, and JavaScript, having developed several projects including responsive websites and web applications. 
+            I have also worked with popular frontend frameworks and libraries such as React.js, jQuery, and Bootstrap, and am eager to continue learning and using new technologies.
+            Collaborating with other team members is a strength of mine, and I am dedicated to writing clean and efficient code that meets project requirements.
             </p>
+            <p lang="fa" title="CV Description" class="bio-description">
+              توسعه دهنده رابط کاربری با 2 سال سابقۀ کار با جاواسکریپت، اچ تی ام ال و سس‌اس‌اس. همچنین دارای تجربۀ کاری باکتابخوانه‌های محبوب مانند ریکت و تایپسکریپت.
+            </p>
+        </div>    
       </section>
       <section title="Skills section" class="skills-sec">
         <h3 lang="en"> Skills</h3>
@@ -294,6 +331,30 @@
           </div>
         </div>
       </section>
+
+<!-- Here my education is declared-->
+
+<section title="Experiences section">
+  <h3 lang="en">Education</h3>
+  <h3 lang="fa">تحصیلات</h3>
+  <div lang="en" class="container experience-container">
+    <div class="experience">
+      <h4>Ayad university of Tehran</h4>
+      <h5>Bachelor | Persian literature and language | 2015 - 2019</h5>
+      <ul class="achievements">
+        <li>Gained a solid knowledge about languages and linguistics</li>
+      </ul>
+    </div>
+    <div class="experience">
+      <h4> Amoueeian high school</h4>
+      <h5>Highschool diploma | Mathematics |  - 2012</h5>
+      <ul class="achievements">
+        <li>Got familiar with mathematics and physics</li>
+        <li> Learned mathematical problem solving and computational thinking</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!--Here The certificates I have achieved are listed -->
 
@@ -370,3 +431,12 @@
 </body>
 
 </html>
+<script>
+  const myBody = document.body;
+  let myLang = "en"
+  toggleLang = () =>
+  {
+    myLang = myLang === "en" ? "fa" : "en";
+    myBody.setAttribute('lang', myLang);
+  }
+</script>
