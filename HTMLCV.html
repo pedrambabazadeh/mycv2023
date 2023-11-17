@@ -109,6 +109,10 @@
       margin-top: 10px;
     }
 
+    .p-contact
+    {
+      padding-top: 10px;
+    }
     /* Experiences Part*/
 
     .experience-container
@@ -129,12 +133,17 @@
 
 
     /* Media Queries */
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 380px) {
       /* Styles for screens with a maximum width of 320px (typical mobile devices) */
 
       h1
       {
         font-size: 28px;
+      }
+
+      .container
+      {
+        max-width: 100%;
       }
 
       .ul-container
@@ -143,12 +152,17 @@
       }
     }
    
-    @media only screen and (min-width: 321px)  and (max-width: 600px) {
+    @media only screen and (min-width: 381px)  and (max-width: 600px) {
       /* Styles for screens with a maximum width of 600px (typical mobile devices) */
 
       h1
       {
         font-size: 24px;
+      }
+
+      .container
+      {
+        max-width: 90%;
       }
 
       .ul-container
@@ -164,11 +178,18 @@
         font-size: 16px;
       }
 
+      .container
+      {
+        max-width:85%;
+      }
+
       .ul-container
       {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
+
+    [content = " Phone nomber :  "]{background-color: aquamarine;}
   </style>
 </head>
 
@@ -179,18 +200,29 @@
       <h2 lang="en" title="role: Frontend Developer">Frontend Developer</h2>
       <h1 lang="fa" title="نام: پدرام بابازاده">پدرام بابازاده</h1>
       <h2 lang="fa" title="حرفه: توسعه دهندۀ رابط کاربری">توسعه‌دهندۀ رابط کاربری</h2>
-      <p lang="en" title="CV Description" class="bio-description">
-        As a front-end developer, I am passionate about creating engaging and intuitive user interfaces that improve the user experience.
-         I have experience with HTML, CSS, and JavaScript, having developed several projects including responsive websites and web applications. 
-         I have also worked with popular frontend frameworks and libraries such as React.js, jQuery, and Bootstrap, and am eager to continue learning and using new technologies.
-         Collaborating with other team members is a strength of mine, and I am dedicated to writing clean and efficient code that meets project requirements.
-        </p>
-        <p lang="fa" title="CV Description" class="bio-description">
-          توشعه دهنده رابط کاربری با 2 سال سابقۀ کار با جاواسکریپت، اچ تی ام ال و سس‌اس‌اس. همچنین دارای تجربۀ کاری باکتابخوانه‌های محبوب مانند ریکت و تایپسکریپت.
-          </p>
+      <p lang="en" title="contact information" class="p-contact">
+        <span> Email Address : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
+        <span> Phone nomber :  <a href="tel:+36202955882">+36202955882</a></span></br>
+        <span> Location: Budapest, HU  </span></br>
+        <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
+        <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
+      </p>
     </header>
 
     <main>
+
+      <section title="about me">
+        <h3> About me</h3>
+        <p lang="en" title="CV Description" class="bio-description">
+          As a front-end developer, I am passionate about creating engaging and intuitive user interfaces that improve the user experience.
+           I have experience with HTML, CSS, and JavaScript, having developed several projects including responsive websites and web applications. 
+           I have also worked with popular frontend frameworks and libraries such as React.js, jQuery, and Bootstrap, and am eager to continue learning and using new technologies.
+           Collaborating with other team members is a strength of mine, and I am dedicated to writing clean and efficient code that meets project requirements.
+          </p>
+          <p lang="fa" title="CV Description" class="bio-description">
+            توشعه دهنده رابط کاربری با 2 سال سابقۀ کار با جاواسکریپت، اچ تی ام ال و سس‌اس‌اس. همچنین دارای تجربۀ کاری باکتابخوانه‌های محبوب مانند ریکت و تایپسکریپت.
+            </p>
+      </section>
       <section title="Skills section" class="skills-sec">
         <h3 lang="en"> Skills</h3>
         <h3 lang="fa"> مهارت‌ها</h3>
@@ -211,6 +243,7 @@
           <li title="CI-CD Skill">CI/CD</li>
           <li title="WCAG Principles Skill">WCAG</li>
           <li title="Agile Scrum Skill">Agile/ Scrum</li>
+          <li title=" Chai.js and Mocha.js skill">Chai - Mocha</li>
           <li title=" SEO Skill">On-page SEO</li>
         </ul>
       </section>
