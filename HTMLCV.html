@@ -246,7 +246,14 @@
       </p>
 
       <!--the following buttong toggles the language between Persian and English-->
-      <div onclick="toggleLang()" class="lang-changer"> click here to modify the language</div>
+<!--<div onclick="toggleLang()" class="lang-changer"> click here to modify the language</div>-->
+
+      <lable for="language-select">Select the language</lable>
+      <select onchange="languager()" class="language-selector" id="language-select">
+        <option value="en">English</option>
+        <option value="de">German</option>
+        <option value="fa">Persian</option>
+      </select>
     </header>
 
     <main>
@@ -553,10 +560,11 @@
 </html>
 <script>
   const myBody = document.body;
-  let myLang = "en"
-  toggleLang = () =>
-  {
-    myLang = myLang === "en" ? "fa" : "en";
-    myBody.setAttribute('lang', myLang);
-  }
+  const languageSelector = document.getElementById("language-select");
+  let myLang = languageSelector.value;
+  console.log(myLang);
+  languager= function () {
+  myLang = languageSelector.value;
+  myBody.setAttribute('lang', myLang);
+  } ;
 </script>
