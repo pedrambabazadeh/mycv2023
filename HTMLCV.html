@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en fa">
+<html lang="en fa de ar">
 
 <head>
   <meta charset="UTF-8">
@@ -95,33 +95,45 @@
 
     /*Language rulse*/
 
-    body[lang = "en"]
+    body[lang = "en"], body[lang = "de"]
     {
       direction: ltr;
     }
 
-    body[lang = "fa"]
+    body[lang = "fa"], body[lanf ="ar"]
     {
       direction: rtl;
     }
 
-    body[lang = "en"] *[lang = "fa"]
+    body[lang="en"] *[lang]:not([lang~="en"])
     {
       display:none;
     }
 
-    body[lang = "fa"] *[lang = "en"]
+    body[lang="ar"] *[lang]:not([lang~="ar"])
     {
       display:none;
     }
 
-   [lang = "en"] .achievements > li
+    body[lang="de"] *[lang]:not([lang~="de"])
+    {
+      display:none;
+    }
+
+    body[lang="fa"] *[lang]:not([lang~="fa"])
+    {
+      display:none;
+    }
+
+    
+
+   [lang = "en"] .achievements > li, [lang = "de"] .achievements > li
     {
       text-align: left;
       font-size: 14px;
     }
 
-    [lang = "fa"] .achievements > li
+    [lang = "fa"] .achievements > li, [lang = "ar"] .achievements > li
     {
       text-align: right;
       font-size: 14px;
@@ -226,7 +238,7 @@
 <body lang="en">
   <div class="container" title="resume Body">
     <header>
-      <h1 lang="en" title="name : Pedram Babazadeh">Pedram Babazadeh</h1>
+      <h1 lang="en de" title="name : Pedram Babazadeh">Pedram Babazadeh</h1>
       <h2 lang="en" title="role: Frontend Developer">Frontend Developer</h2>
       <h1 lang="fa" title="نام: پدرام بابازاده">پدرام بابازاده</h1>
       <h2 lang="fa" title="حرفه: توسعه دهندۀ رابط کاربری">توسعه‌دهندۀ رابط کاربری</h2>
@@ -240,7 +252,7 @@
       <p lang="fa" title="اطلاعات تماس" class="p-contact">
         <span> آدرس ایمیل : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
         <span> شمارۀ تماس :  <a href="tel:+36202955882">+36202955882</a></span></br>
-        <span> سکونتگاه: Budapest, HU  </span></br>
+        <span> سکونتگاه: بوداپست، مجارستان </span></br>
         <span> لینکدین: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
         <span> گیت-هاب: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
       </p>
@@ -260,6 +272,7 @@
 
       <section title="about me">
         <h3 lang="en"> About me</h3>
+        <h3 lang="de">über mich</h3>
         <h3 lang="fa"> دربارۀ من</h3>
         <div class="container">
           <p lang="en" title="CV Description" class="bio-description">
@@ -268,6 +281,12 @@
             I have also worked with popular frontend frameworks and libraries such as React.js, jQuery, and Bootstrap, and am eager to continue learning and using new technologies.
             Collaborating with other team members is a strength of mine, and I am dedicated to writing clean and efficient code that meets project requirements.
             </p>
+            <p lang="de" title="CV Description" class="bio-description">
+              Als Front-End-Entwickler liegt meine Leidenschaft darin, ansprechende und intuitive Benutzeroberflächen zu gestalten, die die Benutzererfahrung verbessern. 
+              Ich habe Erfahrung mit HTML, CSS und JavaScript und habe mehrere Projekte entwickelt, darunter responsive Websites und Webanwendungen. 
+              Außerdem habe ich mit beliebten Frontend-Frameworks und Bibliotheken wie React.js, jQuery und Bootstrap gearbeitet und freue mich darauf, weiterhin neue Technologien zu lernen und anzuwenden.
+               Die Zusammenarbeit mit anderen Teammitgliedern ist eine meiner Stärken, und ich setze mich dafür ein, sauberen und effizienten Code zu schreiben, der den Projektanforderungen entspricht.
+              </p>
             <p lang="fa" title="CV Description" class="bio-description">
               توسعه دهنده رابط کاربری با 2 سال سابقۀ کار با جاواسکریپت، اچ تی ام ال و سس‌اس‌اس.
                همچنین دارای تجربۀ کاری باکتابخوانه‌های محبوب مانند ریکت و تایپسکریپت.
