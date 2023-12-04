@@ -87,9 +87,19 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: 10px;
     font-weight: bold;
+    justify-content: start;
+   }
+
+   body[lang ~= "en"] .ul-container > li , body[lang ~= "de"] .ul-container > li 
+   {
+      text-align: left;
+   }
+
+   body[lang ~= "fa"] .ul-container > li 
+   {
+      text-align: right;
    }
 
     /*Language rulse*/
