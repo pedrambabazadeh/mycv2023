@@ -159,6 +159,11 @@
       text-align: right;
     }
 
+    body[lang~= "fa"] label[for = "language-select"], body[lang~= "ar"] label[for = "language-select"]
+    {
+      text-align: right;
+    }
+
 
     /* Header*/
 
@@ -170,9 +175,10 @@
     .p-contact
     {
       padding-top: 10px;
+      text-align: left;
     }
 
-    header *, header
+    header h1, header h2, header
     {
       text-align: center;
     }
@@ -180,8 +186,6 @@
     header p 
     {
     font-size: 12px;
-    width: 35%;
-    margin: 0 auto;
     text-align: left;
     }
 
@@ -189,6 +193,7 @@
     {
       font-size: 12px;
       font-weight: bold;
+      text-align: left;
     }
 
     @keyframes colorchange {
@@ -207,6 +212,7 @@
     /*background: #007bff;*/
     border-radius: 5px;
     padding: 5px;
+    width: 20%;
   }
 
   select:focus-visible
@@ -271,10 +277,10 @@
         grid-template-columns : 1fr 1fr 1fr;
       }
 
-      header p 
-    {
-      width: 95%;
-    }
+      select
+      {
+        width: 100%;
+      }
     }
    
     @media only screen and (min-width: 381px)  and (max-width: 600px) {
@@ -295,10 +301,10 @@
         grid-template-columns : 1fr 1fr 1fr 1fr 1fr;
       }
 
-      header p 
-    {
-      width: 75%;
-    }
+      select
+      {
+        width: 50%;
+      }
     }
 
     @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -317,6 +323,11 @@
       {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       }
+
+      select
+      {
+        width: 35%;
+      }
     }
   </style>
 </head>
@@ -329,39 +340,40 @@
       <h1 lang="fa" title="نام: پدرام بابازاده">پدرام بابازاده</h1>
       <h2 lang="fa" title="حرفه: توسعه دهندۀ رابط کاربری">توسعه‌دهندۀ رابط کاربری</h2>
       <h2 lang="de" title="role: Frontend Entwickler">Frontend Entwickler</h2>
-      <p lang="en" title="contact information" class="p-contact">
-        <span> Email Address : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
-        <span> Phone number :  <a href="tel:+36202955882">+36202955882</a></span></br>
-        <span> Location: Budapest, HU  </span></br>
-        <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
-        <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
-      </p>
-      <p lang="fa" title="اطلاعات تماس" class="p-contact">
-        <span> آدرس ایمیل : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
-        <span> شمارۀ تماس :  <a href="tel:+36202955882">+36202955882</a></span></br>
-        <span> سکونتگاه: بوداپست، مجارستان </span></br>
-        <span> لینکدین: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
-        <span> گیت-هاب: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
-      </p>
-      <p lang="de" title="Kontaktinformationen" class="p-contact">
-        <span> E-Mail-Adresse : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
-        <span> Telefonnummer :  <a href="tel:+36202955882">+36202955882</a></span></br>
-        <span> Standort: Budapest, Ungarn  </span></br>
-        <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
-        <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
-      </p>
-
+      <div class="container">
+        <p lang="en" title="contact information" class="p-contact">
+          <span> Email Address : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
+          <span> Phone number :  <a href="tel:+36202955882">+36202955882</a></span></br>
+          <span> Location: Budapest, HU  </span></br>
+          <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
+          <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
+        </p>
+        <p lang="fa" title="اطلاعات تماس" class="p-contact">
+          <span> آدرس ایمیل : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
+          <span> شمارۀ تماس :  <a href="tel:+36202955882">+36202955882</a></span></br>
+          <span> سکونتگاه: بوداپست، مجارستان </span></br>
+          <span> لینکدین: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
+          <span> گیت-هاب: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
+        </p>
+        <p lang="de" title="Kontaktinformationen" class="p-contact">
+          <span> E-Mail-Adresse : <a href="mailto:pedrambabazadeh@hotmail.com"> pedrambabazadeh@hotmail.com</a></span></br>
+          <span> Telefonnummer :  <a href="tel:+36202955882">+36202955882</a></span></br>
+          <span> Standort: Budapest, Ungarn  </span></br>
+          <span> LinkedIn: <a href="https://linkedin.com/in/pedram-babazadeh">Pedram-Babazadeh</a>  </span></br>
+          <span> GitHub: <a href="https://github.com/pedrambabazadeh">pedrambabazadeh</a>  </span>
+        </p> 
       <!--the following buttong toggles the language between languages-->
 <!--<div onclick="toggleLang()" class="lang-changer"> click here to modify the language</div>-->
 
-      <label lang="en" for="language-select">Select the language</label>
-      <label lang="fa" for="language-select">زبان را انتخاب کنید</label>
-      <label lang="de" for="language-select">Wählen Sie bitte die Sprache aus</label>
-      <select  name="language-select" title="select the language" onchange="languager()" class="language-selector" id="language-select">
-        <option value="en">English</option>
-        <option value="de">German</option>
-        <option value="fa">Persian</option>
-      </select>
+        <label lang="en" for="language-select">Select the language:</label>
+        <label lang="fa" for="language-select">زبان را انتخاب کنید:</label>
+        <label lang="de" for="language-select">Wählen Sie bitte die Sprache aus:</label>
+        <select  name="language-select" title="select the language" onchange="languager()" class="language-selector" id="language-select">
+          <option value="en">English</option>
+          <option value="de">German</option>
+          <option value="fa">Persian</option>
+        </select>
+      </div> 
     </header>
 
     <main>
